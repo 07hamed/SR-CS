@@ -1,0 +1,416 @@
+Authors,"Sub-specialty, Nature of incidence",Task Description,Task Achieved,Sample Size,Study Setting,Model Proposed,Base Model,Prediction Performance,95% CI,"Domain Standard
+Model",Domain Standard Base Model,Major Challenges Faced,Challenges Classified,ROB
+"Luo et al., 2022 (14)","Risk-model, Postoperative",30-days mortality,Mortality prediction and risk classification,476,Retrospective,XGBoost (AUC),XGBoost,0.81,0.67-0.93,"EuroSCORE II 0.63,(0.47–0.76)",EuroSCORE II,Might overestimate the probability of early mortality when the predicted probability was >30%,Issues with model performance and calibration,low
+"Kim et al., 2022
+(15)","Observational model, Postoperative",Postoperative complication 4 hours prior prediction,Postoperative complications prediction ,Not mentioned,Retrospective,RF (AUC),RF,0.93,,SOFA 0.90 ,SOFA,"Likely due to smaller sample size, the SDs of AUROCs of the models tend to be higher than the training set",Small sample size problem,unclear
+"Kageyama et al., 2024
+(16)","Risk-model, Postoperative",5-year mortality in patients with CABG or PCI for severe CAD,Mortality prediction and risk classification,1035,Retrospective,"LASSO, Univariable and multivariable Cox regression
+(AUC)",Cox Regression,0.94,,Syntax Score 2020 0.763 ,Syntax Score,Lack of continuous updating of information may limit the generalizability of our findings to a rapidly evolving future practice,Issues with model performance and calibration,low
+"Tadege et al., 2024
+(18)","Risk-model, Postoperative",Long-term survival of cardiac surgery patients,Mortality prediction and risk classification,1520,Retrospective,"Random Survival Forest
+(Mean Cross-Validation Score)",RF,0.83,,,,N/A,No specific challenge mentioned,low
+"Temple et al., 2015
+(19)","Observational model, Postoperative",Days to discharge from NICU,Hospital LoS and readmission prediction,4693,Retrospective,"RF
+(AUC)",RF,0.86,,,,Extracting certain features from electronic medical record systems is challenging,Issues with feature selection and variable handling,low
+"Sanger et al., 2016
+(21)","Observational model, Postoperative",Surgical site infection assessment,Perioperative management,851,Prospective,"Naïve Bayes classifiers
+(AUC)",Naïve Bayes,0.749,,"Standard model used only baseline features
+0.634",Unspecified,Several key indicators of SSI are not included in standard procedure (limitations in feature selection),Poor data quality,low
+"Allyn et al., 2017
+(22)","Risk-model, Postoperative",Prediction of mortality in-hospital after elective cardiac surgery,Mortality prediction and risk classification,"6,520",Retrospective,"Greedy ensemble (GBM, RF, Support vector machine, and Naïve Bayes)
+(AUC)",Ensemble Models,0.795,0.755–0.834,EuroSCORE II 0.737 (0.691–0.783),EuroSCORE II,"monocentric study, which limits the extrapolation of ML model in another cardiac surgery center.",Generalizability and validation,low
+"Jalali et al., 2018
+(23)","Observational model, Postoperative",PVL predictive decision support tool (patient adaptable classifiers) combining feature ranking,decision support tools,71,Retrospective,"SVM 
+(F score)",SVM,"0.88 (HLHS)
+1.00 (Non-HLHS)",,,,Number of sample is not sufficiently large compared to number of features,Small sample size problem,low
+"Meyer A et al., 2018
+(24)","Risk-model, Postoperative","Predicting bleeding, mortality, and renal failure in cardiothoracic critical care",Postoperative complications prediction ,"11,492",Retrospective,"RNN
+(AUC)",Deep Learning Models,0.91,,KIDIGO 0.72,KIDIGO,"Lackings in data collection technique, noise, mismatches, contradictions, annotation errors, and omissions in clinical data.",Issues with feature selection and variable handling,low
+"Huang L et al., 2020
+(25)","Risk-model, Postoperative",predicting low and high risks of mPAP > 15 mmHg based on perioperative CT,Mortality prediction and risk classification,96,Retrospective,"RF
+(AUC)",RF,0.787,0.780–0.794,,,A relatively lower amount of sample size. Important markers were not able to be included in the model due to a lack of data.,Poor data quality,unclear
+"Kilic et al., 2020
+(26)","Risk-model, Postoperative",Predicting Operative Mortality Risk in cardiac surgery,Mortality prediction and risk classification,"11,190",Retrospective,"XGBoost
+(AUC)",XGBoost,0.808,,"STS PROM
+0.795",STS Score,"Inconsistency in data entries, and the possible entry of non-surgery-related deaths in mortality data.",Poor data quality,low
+"Zhou et al., 2019
+(27)","Risk-model, Postoperative",Predicting AKI ,AKI prediction,212,Retrospective,"RF
+(AUC)",RF,0.89,0.81-0.97,,,Lacking spatial capabilities in different demographics. Underfitting with low sample size.,Issues with model performance and calibration,high
+"Zhou et al., 2019
+(27)","Risk-model, Postoperative",Predicting paraplegia,Postoperative complications prediction ,212,Retrospective,"SVM
+(AUC)",SVM,0.89,0.71-0.99,,,Lacking spatial capabilities in different demographics. Underfitting with low sample size.,Issues with model performance and calibration,high
+"Jalali et al., 2020
+(30)","Risk-model, Postoperative",Predicting individual risk for prolonged length of stay,Hospital LoS and readmission prediction,549,Retrospective,"3 layer DNN
+(AUC)",Deep Learning Models,0.94,0.90-0.98,,,"Patient having a severe risk of mortality could not be included in the data due to dataset limitation, which causes a bias in estimation. Low sample size.",Poor data quality,low
+"Jalali et al., 2020
+(30)","Risk-model, Postoperative",Predicting individual risk for long-term mortality,Mortality prediction and risk classification,549,Retrospective,"3 layer DNN
+(AUC)",Deep Learning Models,0.95,0.93-0.97,,,"Patient having a severe risk of mortality could not be included in the data due to dataset limitation, which causes a bias in estimation. Low sample size.",Poor data quality,low
+"Gomes et al., 2021
+(31)","Risk-model, Postoperative",Predicting all-cause intrahospital mortality after TAVI,Mortality prediction and risk classification,451,Retrospective,"ANN
+(AUC)",Deep Learning Models,0.96,0.94-0.97,"STS/ACC TAVR score 
+0.65",STS Score,Reducing the feature number negatively affects performance.,Issues with feature selection and variable handling,low
+"Tseng et al., 2020
+(32)","Risk-model, Postoperative",Predicting CSA-AKI utilizing perioperative data following CABG and Valve replacement,AKI prediction,671,Retrospective,"Ensemble 
+(RF + XGBoost)
+(AUC)",Ensemble Models,0.84,0.77-0.89,,,The proposed model might be prone to imbalanced data. Lack of ability to process and derive insight from large time series data.,Class imbalance problem,low
+"Benedetto et al., 2020
+(33)","Risk-model, Postoperative",Predicting in-hospital mortality following cardiac surgery,Mortality prediction and risk classification,28761,Retrospective,"RF
+(AUC)",RF,0.8,0.77-0.83,"Retrained LR 
+0.80, (0.77-0.84)",LR,Lack of calibration (Individual patient risk prediction) of ML models. EuroSCORE is well-calibrated.,Issues with model performance and calibration,low
+"Manyam et al., 2022
+(35)","Observational model, Postoperative",Predicting 30-days readmission after CABG surgery discharge,Hospital LoS and readmission prediction,1303,Retrospective,"Cox regression, XGBoost
+(AUC)",Hybrid Models,0.86,,,,Not including the time-dependent pre and perioperative variables significantly reduces prediction capability.,Poor data quality,low
+"Cai et al., 2020
+(36)","Risk-model, Postoperative",Identifying patients at a high risk of SRPI after cardiovascular surgery,Postoperative complications prediction ,149,Prospective,"XGBoost
+(AUC)",XGBoost,0.8,,,,"Data was limited to geographic location, hindering the generalizability",Poor data quality,low
+"Bertsimas et al., 2021
+(38)","Risk-model, Postoperative","Predicting mortality, prolonged MVST, and prolonged LOS in CHS patients",Postoperative complications prediction ,295000,Retrospective,"Optimal Classification Tree
+(AUC) 
+Mortality
+MVST
+LOS",OCT,0.86,0.85-0.81,,,The lack of interpretability of ML models reduces the credibility and requires a large amount of data to provide sound results.,Complexity and interpretability,low
+"Bodenhofer et al., 2021
+(39)","Risk-model, Postoperative",Predicting 30-day mortality after elective heart valve surgery,Mortality prediction and risk classification,2229,Retrospective,"RF
+(AUC)",RF,0.83,,"EuroSCORE II
+0.70",EuroSCORE II,N/A,No specific challenge mentioned,low
+"Karri et al., 2021
+(40)","Risk-model, Postoperative",POAF prediction in ICU after cardiac surgery,Cardiac and vascular condition/injury,6349,Retrospective,"GBM
+(AUC)",GBM,0.74,0.71-0.77,"POAF Score
+0.63, (0.62–0.64)",POAF Score,The dataset confers limitations in terms of target class definition. The quality of observed data has scope for improvement.,Poor data quality,unclear
+"Zhou et al., 2021
+(41)","Risk-model, Postoperative",Predicting 1-year mortality after heart transplant,Mortality prediction and risk classification,381,Retrospective,"RF
+(AUC)",RF,0.8,,,,N/A,No specific challenge mentioned,low
+"Ong et al., 2023
+(42)","Risk-model, Postoperative",Predicting operative mortality for expanded set of cases,Mortality prediction and risk classification,7745,Retrospective,"RF
+(AUC)",RF,0.83,,"STS Score
+0.77",STS Score,An imbalanced target class affects the prediction capability of models,Class imbalance problem,unclear
+"Cui et al., 2021
+(43)","Risk-model, Postoperative",Predicting CSA-AKI using metabolomics‐based biomarkers,AKI prediction,214,Retrospective,"RF
+(AUC)",RF,0.97,0.94-0.99,,,N/A,No specific challenge mentioned,unclear
+"Sherman et al., 2022
+(44)","Observational model, Postoperative",Predicting 30-day hospital readmission,Hospital LoS and readmission prediction,4924,Retrospective,"RF
+(AUC)",RF,0.76,0.73-0.79,"STS Score
+0.64, (0.60 to 0.68)",STS Score,"Inconsistency in target class definition, resulting in confusion. Overall significant noise in the data.",Poor data quality,low
+"Shi et al., 2022
+(45)","Observational model, Postoperative",Predicting 1- year postoperative malnutrition in CHD children,Pediatric and congenital heart disease/surgery,536,Prospective,"XGBoost
+(AUC)",XGBoost,0.87,0.80-0.91,,,Small sample size and the restraints in incorporating high-dimensional data.,Issues with feature selection and variable handling,low
+"Kalisnik et al., 2022
+(47)","Risk-model, Postoperative",Predicting 12-hour CSA-AKI,AKI prediction,7507,Retrospective,"XGBoost 
+(AUC)",XGBoost,0.88,0.87-0.89,,,The lack of external validation limits the applicability.,Generalizability and validation,low
+"Park et al., 2022
+(48)","Risk-model, Postoperative",Predicting mortality and readmission,Mortality prediction and risk classification,8947,Retrospective,"Ensemble ML Models
+(AUC)",Ensemble Models,0.79,0.75-0.83,"STS Score
+0.79",STS Score,N/A,No specific challenge mentioned,low
+"Zhang et al., 2022
+(49)","Observational model, Postoperative",Spiral CT 3D reconstruction of SAVR in TAVI,Cardiac and vascular condition/injury,62,Retrospective,"DCNN
+(RMSE)",Deep Learning Models,0.071,,"MBIR
+0.086",MBIR,Monocentric study and smaller sample size.,Small sample size problem,low
+"Petrosyan et al., 2022
+(50)","Risk-model, Postoperative",Predicting 1st stage CSA AKI,AKI prediction,6522,Retrospective,"Hybrid of RF, LR
+(AUC)",Hybrid Models,0.75,,"CARE Score
+0.74",CARE Score,Automated variable selection increases the bias in the estimated regression coefficients.,Issues with feature selection and variable handling,unclear
+"Li et al., 2022
+(51)","Risk-model, Postoperative",Predicting 3rd stage CSA AKI,AKI prediction,107,Retrospective,"LR with L2 regularization
+(AUC)",LR,0.82,0.74-0.90,Cleveland-clinical model 0.65; (0.54-0.76),Cleveland-clinical model,Single center study with a relatively limited sample size,Small sample size problem,low
+"Tschoellitsch et al., 2022
+(52)","Observational model, Perioperative",Predict massive perioperative allogeneic blood transfusion in cardiac surgery,Blood transfusion,3782,Retrospective,"RF
+(AUC)",RF,0.81,0.76-0.86,,,N/A,No specific challenge mentioned,low
+"Zea-Vera et al., 2023
+(53)","Risk-model, Postoperative",Predicting operative mortality,Mortality prediction and risk classification,4874,Retrospective,"XGBoost
+(AUC-PR)",XGBoost,0.21,,,,N/A,No specific challenge mentioned,low
+"Zea-Vera et al., 2023
+(53)","Risk-model, Postoperative",Predicting operative  major morbidity,Postoperative complications prediction ,4874,Retrospective,"XGBoost
+(AUC-PR)",XGBoost,0.47,,,,N/A,No specific challenge mentioned,low
+"Mathis et al., 2022
+(54)","Observational model, Postoperative",Predicting 8-hour postoperative deterioration in cardiac surgery patients,Postoperative complications prediction ,1555,Retrospective,"RF
+(AUC)",RF,0.7,0.70-0.71,,,The different nature of the primary outcome from the traditional risk models is the potential cause of poor performance.,Issues with model performance and calibration,low
+"Shang et al., 2022
+(55)","Risk-model, Postoperative",Predicting mortality associated with perioperative cardiac arrest,Mortality prediction and risk classification,150,Retrospective,"RF
+(AUC)",RF,0.91, 0.79-0.98,,,Scarcity of object-specific data. Especially when the population is divided by age.,Small sample size problem,low
+"Arian et al., 2022
+(56)","Observational model, Postoperative",Myocardial function prediction using MRI radiomic after CABG,Cardiac and vascular condition/injury,43,Retrospective,"SCAD-penalized SVM
+(AUC)",SVM,0.78,0.64-0.92,,,N/A,No specific challenge mentioned,low
+"Bi et al., 2022
+(57)","Risk-model, Postoperative",Predicting in-hospital mortality in ICU,Mortality prediction and risk classification,5860,Retrospective,"XGBoost
+(AUC)",XGBoost,0.86,,SOFA Score 0.68,SOFA,Smaller target class in the response variable.,Class imbalance problem,low
+"Castela Forte et al., 2022
+(58)","Risk-model, Postoperative","Predicting 30-day, 1-year, and 5-year mortality",Mortality prediction and risk classification,9415,Retrospective,"Hybrid LSTM, and GB (AUC)
+
+30-day
+
+1-year 
+
+5-year",Deep Learning Models,0.81,,,,Imbalance in target class.,Class imbalance problem,low
+"Morrison et al., 2023
+(59)","Observational model, Postoperative",Predicting post-cardiotomy low cardiac output syndrome,Postoperative complications prediction ,190,Retrospective,Deep Super Learner,Deep Learning Models,0.86,0.79-0.92,,,N/A,No specific challenge mentioned,low
+"Lertsanguansinchai et al., 2023
+(60)","Risk-model, Postoperative",30-day mortality in SAS patients undergoing TAVI,Mortality prediction and risk classification,186,Retrospective,"DT based models
+(AUC)
+
+30-day",DT,0.83,,,,There is an imbalance in the target class and a small sample size.,Class imbalance problem,low
+"Lu et al., 2022
+(61)","Risk-model, Postoperative",Predicting postoperative AF in cardiac surgery,Cardiac and vascular condition/injury,1400,Retrospective,"SVM
+(AUC)",SVM,0.77,0.77-0.78,,,N/A,No specific challenge mentioned,unclear
+"Wang et al., 2022
+(62)","Risk-model, Postoperative",Predicting ARDS after cardiac surgery,Postoperative complications prediction ,1011,Retrospective,"RF
+(AUC)",RF,0.86,0.71-0.99,,,N/A,No specific challenge mentioned,low
+"Zhang et al., 2024
+(63)","Risk-model, Postoperative",Predicting Acute respiratory distress syndrome after cardiac surgery,Postoperative complications prediction ,1996,Retrospective,"Deep Forest
+(AUC)",Deep Learning Models,0.88,,,,Unbalanced and scarce positive cases limit the generalizability,Class imbalance problem,low
+"Li et al., 2024
+(64)","Risk-model, Perioperative",Predicting perioperative myocardial injury (PMI),Cardiac and vascular condition/injury,2983,Retrospective,"RF
+(AUC)
+In different cutoff points",RF,0.66,,"LR
+0.61-0.65",LR,"Need for prospective cohort, external validation",Generalizability and validation,unclear
+"Yang et al., 2024
+(65)","Risk-model, Postoperative",Predicting risk factors for prolonged intra-aortic balloon pump in CABG patients,Mortality prediction and risk classification,143,Retrospective,"LR
+(AUC)",LR,0.77,,,,"Need for prospective cohort, external validation",Generalizability and validation,low
+"Tadege et al., 2024
+(66)","Risk-model, Postoperative",Mortality prediction after cardiac surgery,Mortality prediction and risk classification,1520,Retrospective,"LR
+(AUC)",LR,0.94,,,,N/A,No specific challenge mentioned,unclear
+"Zhang et al., 2024
+(67)","Observational model, Postoperative",Predicting continuous renal replacement therapy in CABG patients,Postoperative complications prediction ,72,Retrospective,"Gaussian Naïve Bayes
+(AUC)",Naïve Bayes,0.81,0.63–0.95,,,"Need for prospective cohort, external validation Small sample size.",Small sample size problem,low
+"Gaye et al., 2024
+(68)","Risk-model, Postoperative",Predicting ascending aortic dilatation in patients with BAV,Cardiac and vascular condition/injury,1034,Prospective,"RF
+(AUC)",RF,0.88,,,,There might be significant predictors of BAV which are not considered in collected data.,Poor data quality,unclear
+"Gaye et al., 2024
+(68)","Risk-model, Postoperative",Predicting ascending aortic dilatation in patients with TAV,Cardiac and vascular condition/injury,1034,Prospective,"RF
+(AUC)",RF,0.54,,,,There might be significant predictors of BAV which are not considered in collected data.,Poor data quality,unclear
+"Cunha et al., 2024
+(69)","Observational model, Perioperative",Predicting the need for blood transfusion in cardiac surgery,Blood transfusion,495,Retrospective,"LR
+(AUC)",LR,0.71,,"TRACK Score
+0.68",TRACK Score,ML performs poorly for small sample data when compared with traditional models.,Small sample size problem,unclear
+"Zhang et al., 2024
+(70)","Risk-model, Postoperative",Heart failure risk prediction model after coronary rotational atherectomy,Cardiac and vascular condition/injury,502,Retrospective,"XGBoost
+(AUC)",XGBoost,0.97,0.95-0.99,,,"Multicenter, large sample, and prospective study needed to evaluate the performance of the ML model.",Generalizability and validation,low
+"Li et al., 2024
+(71)","Observational model, Perioperative",Predicting the need for perioperative RBC transfusion in cardiac surgery,Blood transfusion,11201,Retrospective,"RF Classifier
+(AUC)",RF,0.75,,,,N/A,No specific challenge mentioned,low
+"Tong et al., 2024
+(72)","Risk-model, Postoperative",Predicting major adverse outcome in Pediatric Cardiac Surgery,Postoperative complications prediction ,23000,Retrospective,"LightGBM
+(AUC)",LGBM,0.93,,,,Collecting and integrating laboratory data into model development.,Poor data quality,low
+"Li et al., 2024
+(73)","Observational model, Postoperative",Predicting delirium after cardiac valve surgery,Delirium,507,Retrospective,"RF
+(AUC)",RF,0.92,0.91–0.92,,,N/A,No specific challenge mentioned,low
+"Gong et al., 2024
+(74)","Observational model, Postoperative",Analyzing predictors of in-hospital mortality in STEMI patients,Mortality prediction and risk classification,3205,Retrospective,"AGCOSCA-SVM
+(Accuracy)",SVM,97.83%,,,,N/A,No specific challenge mentioned,low
+"Yang et al., 2023
+(76)","Observational model, Postoperative",Predicting delirium after cardiac surgery in elderly patients,Delirium,367,Retrospective,"RF
+(AUC)",RF,0.92,,,,"Data scarcity, and imbalance in target classes",Class imbalance problem,low
+"Hong et al., 2023
+(77)","Observational model, Perioperative",Early prediction of LCOS occurrence in valve surgery,Perioperative management,2218,Retrospective,"SVM
+(AUC)",SVM,0.86,0.73-0.85,"VIS
+0.776, (0.721–0.831)",VIS,"Lacks multicenter data, prospective and external validation",Generalizability and validation,low
+"Sarris et al., 2023
+(78)","Observational model, Postoperative",Congenital heart surgery ML-derived benchmark (LOS),Hospital LoS and readmission prediction,172888,Retrospective,"Optimal Classification Tree
+(AUC)",OCT,0.81,,,,Rare events are merged with similar risk attributes. Specific estimations of rare events are not made possible.,Class imbalance problem,low
+"Sarris et al., 2023
+(78)","Observational model, Postoperative",Congenital heart surgery ML-derived benchmark (HM),Postoperative complications prediction ,172888,Retrospective,"Optimal Classification Tree
+(AUC)",OCT,0.86,,,,Rare events are merged with similar risk attributes. Specific estimations of rare events are not made possible.,Class imbalance problem,low
+"Sarris et al., 2023
+(78)","Observational model, Postoperative",Congenital heart surgery ML-derived benchmark (MVST),Postoperative complications prediction ,172888,Retrospective,"Optimal Classification Tree
+(AUC)",OCT,0.85,,,,Rare events are merged with similar risk attributes. Specific estimations of rare events are not made possible.,Class imbalance problem,low
+"Santos et al., 2024
+(79)","Risk-model, Postoperative",Estimating the risk of severe complications within 90 days following cardiothoracic surgery discharge,Postoperative complications prediction ,5045,Retrospective,"RF
+(AUC)",RF,0.71,0.62-0.80,,,Data imbalance in target classes.,Class imbalance problem,unclear
+"Nagata et al., 2023
+(80)","Observational model, Postoperative",Predicting postoperative delirium in cardiovascular surgery patients,Delirium,120,Prospective,"Bernoulli Naïve Bayes
+(AUC)",Naïve Bayes,0.76,,,,Small sample size due to the prospective nature of study,Small sample size problem,unclear
+"Jia et al., 2023
+(81)","Risk-model, Postoperative",Predicting CSA AKI after CABG surgery,AKI prediction,270,Retrospective,"LightGBM
+(AUC)",LGBM,0.82,0.78-0.87,,,Significant variables could not be employed due to poor data quality,Poor data quality,unclear
+"Zhao et al., 2024
+(82)","Observational model, Postoperative",Predicting postoperative delirium in cardiovascular surgery patients,Delirium,885,Retrospective,"ANN
+(AUC)",Deep Learning Models,0.72,0.68-0.77,,,N/A,No specific challenge mentioned,low
+"Jiang et al., 2023
+(83)","Risk-model, Postoperative",Early prediction of CSA AKI after cardiac surgery,AKI prediction,2310,Retrospective,"LR
+(AUC)",LR,0.81,0.75-0.86,,,"Increasing input features did not improve the predictive ability, probably due to the high correlation between the features and data noise.",Issues with feature selection and variable handling,low
+"Nagy et al., 2024
+(84)","Risk-model, Postoperative",Predicting CSA-AKI in pediatric patients,AKI prediction,402,Retrospective,,,0.88,0.72-1.00,,,N/A,No specific challenge mentioned,low
+"Tong et al., 2023
+(85)","Risk-model, Postoperative",Predicting CSA-AKI after extracorporeal cardiac surgery,AKI prediction,1264,Retrospective,"RFC
+(AUC)",RF,0.77,0.72-0.83,,,Need for prospective validation pf results is not easy.,Generalizability and validation,low
+"Zahid et al., 2024
+(86)","Observational model, Postoperative",30-day readmission for heart failure after TAVR,Hospital LoS and readmission prediction,92363,Retrospective,Not provided,,0.76,0.74-0.77,,,Extremely unbalanced target class,Class imbalance problem,unclear
+"Dai et al., 2023
+(87)","Risk-model, Postoperative",Predicting AKI after acute aortic dissection repair,AKI prediction,265,Retrospective,"XGBoost
+(AUC)",XGBoost,0.8,0.68-0.91,,,"The lack of reasonable explanations for specific independent variable contribution, and higher false negative percentage",Class imbalance problem,low
+"Li et al., 2024
+(88)","Observational model, Postoperative",Outcome prediction following supraingunal bypass surgery,Postoperative complications prediction ,16832,Retrospective,"XGBoost
+(AUC)",XGBoost,0.92,0.91-0.93,,,N/A,No specific challenge mentioned,low
+"Hui et al., 2023
+(89)","Observational model, Postoperative",Predicting bleeding after cardiac surgery by Papworth definition,Postoperative complications prediction ,2000,Retrospective,"Ensemble Voting Classifier
+(AUROC)",Ensemble Models,0.74,,,,N/A,No specific challenge mentioned,low
+"Zeng et al., 2024
+(90)","Risk-model, Postoperative",Predicting OPCAB-AKI after CABG,AKI prediction,1110,Retrospective,"RF
+(AUC)",RF,0.9,,,,Multicentric prospective validation is required for generalization.,Generalizability and validation,low
+"Rauf et al., 2023
+(91)","Risk-model, Postoperative",Predictring stroke in mitral stenosis (MS) with atrial flutter (AFL),Cardiac and vascular condition/injury,2184,Retrospective,"GBM
+(AUC)",GBM,0.8,,,,"The GBM model achieves optimal performance slowly, requiring large training data.",Issues with model performance and calibration,high
+"Rauf et al., 2023
+(91)","Risk-model, Postoperative",Predictring all-cause mortality in mitral stenosis (MS) with atrial flutter (AFL),Mortality prediction and risk classification,2184,Retrospective,"GBM
+(AUC)",GBM,0.83,,,,"The GBM model achieves optimal performance slowly, requiring large training data.",Issues with model performance and calibration,high
+"Zhu et al., 2023
+(92)","Risk-model, Postoperative",Predicting POAF and identifying risk factors following isolated valve surgery,Cardiac and vascular condition/injury,847,Retrospective,"SVM
+(AUC)",SVM,0.79,,,,N/A,No specific challenge mentioned,low
+"Betts et al., 2023
+(93)","Risk-model, Postoperative",Predicting 30-day mortality after paediatric cardiac surgery,Mortality prediction and risk classification,14343,Retrospective,"Gradient Boosted Tree
+(AUC)",GBT,0.87,0.82-0.92,"PRAiS2 and STS Score
+
+0.86",STS Score,Extremely imbalance target class.,Class imbalance problem,low
+"Mollaei et al., 2021
+(95)","Observational model, Postoperative",Predicting length of stay in ICU,Hospital LoS and readmission prediction,7364,Retrospective,"RF
+(Accuracy)",RF,0.76,,,,N/A,No specific challenge mentioned,high
+"Mendes et al., 2015
+(96)","Risk-model, Postoperative","Predicting Reintubation, PMV",Postoperative complications prediction ,1315,Retrospective,"ANN
+(AUC)",Deep Learning Models,0.65,,"LR
+
+
+0.62",LR,"Complex models are prone to overfitting, simpler model with few neurons tends to learn the pattern well in imbalance data",Issues with model performance and calibration,low
+"Mendes et al., 2015
+(96)","Risk-model, Postoperative",Predicting Mortaity,Mortality prediction and risk classification,1315,Retrospective,"ANN
+(AUC)",Deep Learning Models,0.85,,LR 0.86,LR,"Complex models are prone to overfitting, simpler model with few neurons tends to learn the pattern well in imbalance data",Issues with model performance and calibration,low
+"Moein et al., 2015
+(97)","Observational model, Postoperative",Predicting outcome of SPA shunt surgery,Pediatric and congenital heart disease/surgery,1036,Retrospective,"RF
+(AUC)",RF,0.72,,,,N/A,,high
+"Saha et al., 2022
+(98)","Observational model, Postoperative",Detection of Myocardial Infarction,Cardiac and vascular condition/injury,N/A,Retrospective,"K-NN
+(AUC)",Deep Learning Models,0.9,,,,N/A,,high
+"Beardsley et al., 2019
+(99)","Risk-model, Postoperative",Predicting AKI following cardiac surgery,AKI prediction,335,Retrospective,"L1 regularized LR
+(AUC)",LR,0.83,,,,N/A,,high
+"Bahrami et al., 2024
+(100)","Observational model, Postoperative",Advanced ventilators allocation ≤6 hours after admission to the ICU,Critical care and resource allocation,328,Retrospective,"ANN
+(AUC)",Deep Learning Models,0.82,,,,N/A,,low
+"Ahumadal et al., 2018
+(101)","Risk-model, Postoperative",Predicting 1-year transplant free survival after Norwood Procedure,Mortality prediction and risk classification,555,Retrospective,"Feed Forward Neural Network
+(AUC)",Deep Learning Models,0.94,,,,N/A,,unclear
+"Dsouza et al., 2024
+(102)","Observational model, Postoperative",Classifying AF following cardiac intervention,Cardiac and vascular condition/injury,5822,Retrospective,"SVM
+(Accuracy)",SVM,96.60%,,,,N/A,,unclear
+"Peng et al., 2021
+(103)","Risk-model, Postoperative",Predicting AKI via interpretable ensemble learning and CRNN,AKI prediction,6388,Retrospective,"CNN-LSTM 
+(AUC)",Deep Learning Models,0.84,0.83-0.85,,,Extreme class imbalance makes it difficult for model evaluation,Class imbalance problem,unclear
+"Peng et al., 2021
+(103)","Risk-model, Postoperative",Predicting AKI via interpretable ensemble learning and CRNN,AKI prediction,6388,Retrospective,"RF 
+(AUC)",Deep Learning Models,0.87,0.86-0.88,,,Extreme class imbalance makes it difficult for model evaluation,Class imbalance problem,unclear
+"Penny-dimri et al., 2021
+(104)","Risk-model, Postoperative",Predicitng CSA AKI and risk profiling,AKI prediction,97964,Retrospective,"GBM 
+(AUC)",GBM,0.78,,"Cleveland Clinic Score
+
+0.71",Cleveland-clinical model,The lack of ability to modify risk factors as per clinicians requirement to provide targeted perioperative optimization,Issues with model performance and calibration,low
+"Nistal-Nuño, 2022
+(105)","Risk-model, Postoperative",Predicting mortality 12-hour in advance in CSRU and CCU patients,Mortality prediction and risk classification,11059,Retrospective,"XGBoost
+(AUROC)",XGBoost,0.92,,"Serial SOFA
+
+0.84",SOFA,ML models lack the ability to incorporate ordered time sequence of events.,Issues with model performance and calibration,low
+"Ryan et al., 2023
+(106)","Risk-model, Postoperative",Predicting AKI after cardiac surgery (stage 2 AKI),AKI prediction,4267,Retrospective,"Ensemble of tree-based, neural network, clustering, and logistic regression 
+
+(AUC)",Ensemble Models,0.95,,,,N/A,,unclear
+"Allou et al., 2023 (107)","Risk-model, Postoperative",Mortality prediction in cardiac surgery decision making using deep learning,Mortality prediction and risk classification,165640,Retrospective,"TabBERT
+(AUC)",Deep Learning Models,0.83,0.83-0.83,"EuroSCORE II
+
+0.80, (0.80 - 0.80)",EuroSCORE II,"Lack of validation in an external cohort, and the limitation of clinical models to use fewer variables",Generalizability and validation,low
+"Hijazi et al., 2024
+(112)","Risk-model, Postoperative",Predicting post-CABG mortality,Mortality prediction and risk classification,108,Retrospective,"RF
+(AUC)",RF,0.95,,,,Smaller sample size and retrospective nature of the study makes it prone to susceptibility and selection bias.,Small sample size problem,
+"Lee et al., 2025
+(113)","Observational model, Postoperative",Detecting myocardial infarction,Cardiac and vascular condition/injury,8493,Prospective,"AI-ECG
+(AUC)",Deep Learning Models,0.878,0.86-0.88,"HEART Score
+
+0.87, (0.86-0.88)",HEART,N/A,No specific challenge mentioned,
+"Florquin et al., 2024
+(114)","Observational model, Postoperative",Predicting pediatric cardiac surgery related complications.,Pediatric and congenital heart disease/surgery,1364,Retrospective,"LR
+(AUC)",LR,0.83,,,,Lack of generalizability of models due to differences in patient demographics.,Generalizability and validation,
+"Dong et al., 2025
+(115)","Risk-model, Postoperative",Predicting gastrointestinal bleeding after CABG.,Postoperative complications prediction ,16440,Retrospective,"LASSO regularized XGBoost
+(AUC)",XGBoost,0.85,,,,Understanding and interpretability issue of ML models.,Complexity and interpretability,
+"Mayourian et al., 2024
+(116)","Risk-model, Postoperative",Predicting 5-year mortality in rTOF.,Mortality prediction and risk classification,1054,Retrospective,"CNN based AI-ECG
+(AUC)",Deep Learning Models,0.81,,,,N/A,,
+"Pei et al., 2025
+(117)","Risk-model, Postoperative",Predicting in-hospital all-cause mortality associated with SHR,Mortality prediction and risk classification,3848,Retrospective,"Naïve Bayes with Lasso Regression
+(AUC)",Naïve Bayes,0.79,,,,N/A,,
+"Nedadur et al., 2023
+(118)","Observational model, Perioperative",Decision making and strategy optimizationfor death risk reduction,decision support tools,1323,Retrospective,"XGBoost
+(AUC)",XGBoost,0.77,,,,N/A,,
+"Chen et al., 2025
+(119)","Observational model, Perioperative",Predicting medical expenses in triple vessel PCI patients.,Critical care and resource allocation,4835,Retrospective,"XGBoost
+(RMSE)",XGBoost,0.158,,,,N/A,,
+"Li et al., 2025
+(120)","Risk-model, Postoperative","Predicting 1-year adverse outcomes 
+following TEVAR and complex EVAR",Postoperative complications prediction ,10738,Retrospective,"XGBoost
+(AUC)",XGBoost,0.99,0.97-0.99,"LR
+0.70, (0.68-0.72)",LR,N/A,,
+"Hsu et al., 2024
+(121)","Risk-model, Postoperative",Predicting first-day mortality for VA-ECMO patients.,Mortality prediction and risk classification,1748,Retrospective,"Random Survival Forest
+(AUC)",RF,0.95,0.92-0.98,"SOFA Score
+0.75, (0.68-0.81)",SOFA,Lack of crucial objective specific data hinders model performance as it depends on quality and comprehensiveness of data.,Poor data quality,
+"Zhang et al., 2025
+(122)","Risk-model, Postoperative","Predicting paroxysmal and 
+persistent atrial fibrillation",Cardiac and vascular condition/injury,1600,Retrospective,"Gradient Boost
+(AUC)",GBM,0.87,0.85-0.88,,,Smaller dataset size necessitates validation of the study results with a larger data set.,Small sample size problem,
+"Yan et al., 2024
+(123)","Risk-model, Postoperative",Predicting the risk of postoperative arrhythmia in pmVSD patients,Postoperative complications prediction ,1384,Retrospective,"LR
+(AUC)",LR,0.86,0.82-0.90,,,Lack of generalizability of ML models restricts their implication.,Generalizability and validation,
+"Askarinejad et al., 2024
+(124)","Observational model, Postoperative",Forecasting the early recurrence of atrial fbrillation following catheter ablation.,Cardiac and vascular condition/injury,402,Prospective,"Catboost
+(AUC)",CatBoost,0.94,,,,Smaller sample size and lack of external validation restricts the generalizability.,Small sample size problem,
+"Jiang et al., 2025
+(125)","Risk-model, Postoperative",Predicting extubation failure after cardiac surgery in critically ill patients,Postoperative complications prediction ,776,Retrospective,"XGBoost
+(AUC)",XGBoost,0.79,0.78-0.80,,,Monocentric data limits the applicability.,Generalizability and validation,
+"Liu et al., 2024
+(126)","Risk-model, Postoperative",Predicting AKI in active infective endocarditis,AKI prediction,527,Retrospective,"RBF-SVM
+(AUC)",Hybrid Models,0.77,0.69-0.84,,,N/A,,
+"Squiccimarro et al., 2025
+(127)","Risk-model, Postoperative","Predicting systemic inflammatory response syndrome 
+(SIRS) on 30-day mortality following cardiac surgery",Postoperative complications prediction ,1908,Retrospective,"Procedure-adjusted Risk Model
+(AUC)",Hybrid Models,0.82,0.76-0.85,,,N/A,,
+"Li et al., 2024
+(128)","Risk-model, Postoperative","Early prediction 
+model for cardiac surgery-associated acute kidney injury",AKI prediction,689,Prospective,"LASSO Regression
+(AUC)",LASSO,0.84,0.79-0.88,,,Limitations in applicability of the model to other racial and ethnic groups.,Generalizability and validation,
+"Yang et al., 2024
+(129)","Observational model, Postoperative",Predicting prolonged ICU stay for IABP patients in CABG surgery,Hospital LoS and readmission prediction,236,Retrospective,"XGBoost
+(AUC)",XGBoost,0.73,,,,N/A,,
+"Shen et al., 2025
+(130)","Risk-model, Postoperative",Predicting postoperative complications using multi-task representation learning,Postoperative complications prediction ,89246,Retrospective,"surgVAE
+(AUC)",Deep Learning Models,0.83,,,,N/A,,
+"Zhou et al., 2025
+(131)","Risk-model, Postoperative",Predicting postoperative delirium in cardiac surgery patients,Delirium,103,Retrospective,"RF
+(AUC)",RF,0.91,,,,N/A,,
+"Li et al., 2025
+(132)","Risk-model, Postoperative",1-year mortality prediction following TCAR,Mortality prediction and risk classification,38325,Retrospective,"XGBoost
+(AUC)",XGBoost,0.91,0.90-0.92,,,N/A,,
+"Li et al., 2024
+(133)","Observational model, Postoperative",Predicting risk factors of prolonged length of stay for aortic dissection.,Hospital LoS and readmission prediction,516,Retrospective,"XGBoost
+(AUC)",XGBoost,0.71,0.62-0.80,,,Lack of external validation limiting the generalizability.,Generalizability and validation,
+"Razavi et al., 2025
+(134)","Risk-model, Postoperative",Predicting 1-year mortality in patients with STEMI,Mortality prediction and risk classification,605,Retrospective,"Catboost
+(AUC)",CatBoost,0.82,,,,Imbalanced dataset in healthcare analytics and ML models are prone to imbalanced data.,Class imbalance problem,
+"Ma et al., 2025
+(135)","Risk-model, Postoperative",Feature analysis of of predictor variables influencing the risk of AGI,Postoperative complications prediction ,188,Retrospective,"RF
+(AUC)
+[Macro-averaged for 3 phenogroup)",RF,0.96,0.84-1.00,,,Smaller sample size and need for external validation.,Small sample size problem,
+"Li et al., 2025
+(136)","Observational model, Postoperative",Assessing postoperative pulmonary complications using wearable device data,Postoperative complications prediction ,100,Retrospective,"XGBoost
+(AUC)",XGBoost,0.82,0.74-0.90,,,N/A,,
+"Zhang et al., 2025
+(137)","Risk-model, Postoperative",Predicting microvascular obstruction in STEMI patients with CMR,Cardiac and vascular condition/injury,350,Retrospective,"XGBoost
+(AUC)",XGBoost,0.86,,,,Low sample size limits predictive capabilities.,Small sample size problem,
+"Li et al., 2024
+(138)","Risk-model, Postoperative",Predicting atrial fibrillation after RFCA,Cardiac and vascular condition/injury,325,Retrospective,"SVM
+(AUC)",SVM,0.79,0.78-0.80,,,Imbalance in the target class creates a problem and 5-fold cross validation might also lead to overfitting.,Class imbalance problem,
+"Khan et al., 2024
+(139)","Risk-model, Postoperative",Post-cardiac surgery mortality prediction,Mortality prediction and risk classification,5443,Retrospective,"RF
+(AUC)",RF,0.87,,"EuroSCORE II
+0.73",EuroSCORE II,N/A,,
+"Arellano et al., 2024
+(140)","Observational model, Postoperative",Predicting length of ICU stay using perioperative patterns,Hospital LoS and readmission prediction,317,Retrospective,"RF
+(AUC)",RF,0.92,,,,Class imbalance needs to be addressed to prevent underfitting.,Class imbalance problem,
+"Al-Absi et al., 2024
+(141)","Observational model, Postoperative",Cost-benefit management for AKI patients in cardiac surgery,AKI prediction,2907,Retrospective,"RF-XGBoost Hybrid
+(F-1 score)",Hybrid Models,0.69,,,,N/A,,
